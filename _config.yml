@@ -1,0 +1,24 @@
+#Dependencies
+markdown:         kramdown
+highlighter:      true
+
+# Permalinks
+permalink:        pretty
+
+# Encoding
+encoding:         'utf-8'
+
+# Setup
+title:            Spark for Prof. WANG site
+tagline:          Project Page of IWCT Spark Group
+paginate:         8
+baseurl:          /
+
+pages_list:
+  Home:  '/'
+  Blog: '/blog'
+  Archive: '/archive'
+  CV:   '/CV'
+  Research_log:  '/Diary'
+
+excerpt_separator:  <!--more-->
