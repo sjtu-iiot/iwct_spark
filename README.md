@@ -8,6 +8,6 @@ Welcome to join us!
 
 Followings are our motivations:
 +   implement Spark on our own cluster
-+   demonstrate effcient algorithms in dealing with massive data
++   deploy distributed algorithms dealing with massive data
 +   provide an easy-to-use platform for new data engineers
 
