@@ -1,0 +1,8 @@
+
+   Number of records included: 57625375
+   Total Number of topics included: 244
+   Total Number of users included: 1345370
+   Max Topics Number per user: 203
+   Avg Topics Number per user: 15.515802344336501
+   Max Users Number per topic: 719855
+   Avg Users Number per topic: 85551.20901639345
