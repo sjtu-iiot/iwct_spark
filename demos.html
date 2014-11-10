@@ -15,6 +15,7 @@
 <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
 <link href="static/css/bootstrap.min.css" rel="stylesheet">
 <link href="static/css/offcanvas.css" rel="stylesheet">
+<link href="static/css/pagerank.css" rel="stylesheet">
 
 <!-- Custom Fonts -->
 <!-- <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">-->
@@ -52,13 +53,13 @@
             <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation" data-tabs="tabs">
                 <div class="list-group nav nav-tabs" id="projectTabs">
                     <a href="#apriori" class="list-group-item active" data-toggle="tab">A-priori</a>
-                    <a href="#em" class="list-group-item" data-toggle="tab">EM algorithm</a>
+                    <a href="#em" class="list-group-item" data-toggle="tab">Expectation Maximization</a>
                     <a href="#pagerank" class="list-group-item" data-toggle="tab">PageRank</a>
                     <a href="#kmeans" class="list-group-item" data-toggle="tab">K-means</a>
                     <a href="#recommend" class="list-group-item" data-toggle="tab">Recommend</a>
                 </div>
                 <div>
-                    <p>Copyright&copy; SJTU-Spark 2014</p>
+                    <p>&copy; SJTU-SPARK 2014</p>
                 </div>
             </div><!--/.sidebar-offcanvas-->
 
@@ -71,7 +72,7 @@
                          <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
                          </p>
                          <div class="jumbotron">
-                             <h1>A-priori</h1>
+                             <h1>A-priori!</h1>
                              <p>This is an example to show the potential of an offcanvas layout pattern in Bootstrap. Try some responsive-range viewport sizes to see it in action.</p>
                          </div><!-- jumbotron -->
                      </div><!--/.col-xs-12.col-sm-9-->
@@ -83,7 +84,7 @@
                          <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
                          </p>
                          <div class="jumbotron">
-                             <h1>EM algorithm</h1>
+                             <h1>Expectation, Maximization!</h1>
                              <p>This is an example to show the potential of an offcanvas layout pattern in Bootstrap. Try some responsive-range viewport sizes to see it in action.</p>
                          </div><!-- jumbotron -->
                      </div><!--/.col-xs-12.col-sm-9-->
@@ -95,9 +96,58 @@
                          <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
                          </p>
                          <div class="jumbotron">
-                             <h1>PageRank</h1>
+                             <h1>Page, Rank!</h1>
                              <p>This is an example to show the potential of an offcanvas layout pattern in Bootstrap. Try some responsive-range viewport sizes to see it in action.</p>
                          </div><!-- jumbotron -->
+                         
+                         <div id="content">
+                             <img id="page_img" src="img/pagerank/1.jpg">
+                             
+                             <div id="page">
+                                 <h3>Using PageRank to find hot User based on re-post information</h3>
+                                 <p>The core source code of PageRank：<br>
+                                    var PR = Array.fill(n)( 1.0 ) <br>
+                                    val oldPR = Array.fill(n)( 1.0 ) <br>
+                                    for( iter <- 0 until numIter ) { swap(oldPR, PR) for( i <- 0 until n ) <br>
+                                    { PR[i] = alpha + (1 - alpha) * inNbrs[i].map(j => oldPR[j] / outDeg[j]).sum } }<br>
+                                 </p>
+                                 <img id="image" src="img/pagerank/2.png">
+                                 <p id="bp">1. The second parameter of “PageRank()” can control accuracy and running time.<br>
+                                    2. The default  of resetProb is 0.15.
+                                 </p>
+                             </div>
+                             <div id="page">
+                                 <div id="bp"> 
+                                     <p>Data amount：1030000<br> 
+                                        Verticals.15000000 Edges.
+                                     </p>
+                                     <img id="image" src="img/pagerank/3.png">
+                                 </div>
+                                 <h5>The second parameter of PageRank() set：0.0001<br>
+                                    Running time：3  minutes
+                                 </h5>
+                                 <h4 id="bp">Using  GraphLoader to load the graph.</h4>
+                                 <img id="image" src="img/pagerank/4.png">
+                             </div>
+
+                             <img id="page_img" src="img/pagerank/5.jpg">
+                             
+                             <div id="page">
+                                 <h4>Simple version of code:</h4>
+                                 <img id="image" src="img/pagerank/6.png">
+                                 <h4>Verticals contain information like name and tags:</h4>
+                                 <img id="image" src="img/pagerank/7.png">
+                             </div>
+
+                             <div id="page">
+                                 <p>It is just a simple use of PageRank. We can get more accuracy result by throwing away zombie users. To find zombie users, we can use PageRank in a different way, because they follow a lot of people but none followers.<br>
+                                 Or we can using tag to find famous people by calculating PR among people whose tag includes “SPARK”.<br>
+                                 <br>
+                                 Unlike website, Weibo is interesting because in website, high PR like google has many connection with other websites, but famous people in Weibo only follow several people.
+                                 </p>
+                             </div>
+                         </div>
+                         <p></p>
                      </div><!--/.col-xs-12.col-sm-9-->
                  </div>
 
@@ -107,7 +157,7 @@
                          <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
                          </p>
                          <div class="jumbotron">
-                             <h1>K-Means</h1>
+                             <h1>K, Means!</h1>
                              <p>This is an example to show the potential of an offcanvas layout pattern in Bootstrap. Try some responsive-range viewport sizes to see it in action.</p>
                          </div><!-- jumbotron -->
                      </div><!--/.col-xs-12.col-sm-9-->
@@ -119,7 +169,7 @@
                          <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
                          </p>
                          <div class="jumbotron">
-                             <h1>Recommender System</h1>
+                             <h1>recommend, system!</h1>
                              <p>This is an example to show the potential of an offcanvas layout pattern in Bootstrap. Try some responsive-range viewport sizes to see it in action.</p>
                          </div><!-- jumbotron -->
                      </div><!--/.col-xs-12.col-sm-9-->
