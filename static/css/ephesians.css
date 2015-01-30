@@ -459,3 +459,18 @@ footer .footer-below {
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
 }
+
+
+#myCarousel{
+    background-color:#2c3e50;
+    height:500px;
+}
+.carousel-inner div {
+    max-height:500px;
+}
+
+.carousel-inner div img{
+    width:100%;
+    overflow:hidden;
+    max-height:500px;
+}
