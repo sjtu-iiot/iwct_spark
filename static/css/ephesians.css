@@ -459,3 +459,25 @@ footer .footer-below {
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
 }
+
+#slide_container {
+    margin-top:20px;
+    width:80%;
+    margin-left:10%;
+}
+
+.carousel-inner div img{
+    width:60%;
+    margin-left:20%;
+    height:200px;
+}
+
+.carousel-inner div p{
+    width:90%;
+    margin-left:5%;
+}
+
+#carousel-control_left , #carousel-control_right , #carousel-control_left2 , #carousel-control_right2  {
+    background-image: -webkit-linear-gradient(left, rgba(0,0,0,0.0000) 0, rgba(0,0,0,0) 0%);
+    background-image: linear-gradient(to right, rgba(0,0,0,0.000) 0, rgba(0,0,0,0) 100%);
+}
