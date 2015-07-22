@@ -43,19 +43,19 @@ $(document).ready(function(){
 		content +='<div class="article_container">';
 		if (i % 2 == 0){
 			content +=
-				'</span></strong></p><img src="'
+				'<img src="'
 			;
 			content +=
 				demo_info[i].img
 			;
 			content +=
-				'" width="350" height="262" align="left"/><p><strong><span style="font-size:20px;display:block;margin-left:380px;">'
+				'" width="350" height="262" align="left"/><p><strong><span style="font-size:25px;display:block;margin-left:380px;">'
 			;
 			content +=
 				demo_info[i].title
 			;
 			content +=
-				'<div class="projects_body_passage" >'
+				'</span></strong></p><div class="projects_body_passage" >'
 			;
 			content +=
 				demo_info[i].content
@@ -71,19 +71,19 @@ $(document).ready(function(){
 			;
 		} else {
 			content +=
-				'</span></strong></p><img src="'
+				'<img src="'
 			;
 			content +=
 				demo_info[i].img
 			;
 			content +=
-				'"  width="350" height="262" align="right"/><p><strong><span style="font-size:20px;text-align:left;display:block;">'
+				'"  width="350" height="262" align="right"/><p><strong><span style="font-size:25px;text-align:left;display:block;">'
 			;
 			content +=
 				demo_info[i].title
 			;
 			content +=
-				'<div class="projects_body_passage_left" >'
+				'</span></strong></p><div class="projects_body_passage_left" >'
 			;
 			content +=
 				demo_info[i].content
